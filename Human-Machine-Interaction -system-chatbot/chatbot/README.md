@@ -43,7 +43,6 @@ nltk.download('wordnet')
 ```
 
 ## How to run
-* Jupyter Notebook 
 
 
 ```
