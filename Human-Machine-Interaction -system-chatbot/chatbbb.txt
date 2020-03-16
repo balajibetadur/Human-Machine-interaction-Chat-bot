@@ -1,0 +1,76 @@
+Hello.
+
+    I briefly explained about chatbots and working of chatbots which I have developed for some specefic domains.
+
+    Chatbots are computer program that generates human conversations through voice commands or text chats or both.Basically there are broadly two variants of chatbots: 
+1. Rule-Based (Responses are based on some rules predefined and the bot is trained on)
+2. Self-learning(Uses machine learning techniques to be more efficient)
+   a.Retrieval bots(retrives response from predefined responses or conversation)
+   b.generative bots(can generate the answers and not always replies with one of      the answers from a set of answers. This makes them more intelligent as they         take word by word from the query and generates the answers.)
+
+   I have developed few chatbots based on specefic domain which works completely on a predefined data which can be web-scraped data or collected data.I used NLP ,Similarity matching approches.I used some predefined libraries like NLTK ,numpy ,sklearn ,cosine_similarity .
+
+   First there is a need to preprocess the data, i.e. converting everything in uppercase or lowercase so that algorithm does not treat same words as two different cases and Tokenisation (Converting the data in list of tokens.There are two forms available ,sentence tokenisation and word tokenisation).There are some basic operations to be carried on , like removal of stop words ,removal of Noise , Stemming and Lemmatization.Stemming help in reducing derived words to their root words and Lemmatisation helps in treating different words with same meaning.
+
+
+Generating Response
+
+  After preprocessing, we need to transform text into a meaningful vector (or array) of numbers. The bag-of-words is a representation of text that describes the occurrence of words within a document. It involves two things:
+  1. List of words occured
+  2. frequency of occurence
+
+TF-IDF (Term Frequency - Inverse document Frequency)
+
+  A problem with bag of words is highly frequent words start appearing everytime which do not contain much information(ex:the).TF-IDF is used to remove such kind of un necesary words.TF-IDF is directly proportional to the wored frequency ,i.e. more the TF-IDF value more the occurence of the word.So the algorithm will get ton know the word and lessen's its importance.
+
+Cosine-Similarity
+
+  It is nothing but thwe measure of similarity between two non-zero vectors. It is used to fine the similarity between two strings or tokens in this project.If the cosine similarity value is 1 ,then two strings are completely similar and the value is 0 then the strings are not similar ,in between values show ranges of similarities between the strings.
+
+
+
+Algorithm:
+
+  Here is the complete flow of the algorithm for the chatbot.
+
+Step 1: Tokenistion of raw data(sentence and word).
+
+Step 2: Take the input from the user.
+
+Step 3: Preprocessing of the input(Stemming,Lemmatization ,removal of punctuations).
+
+Step 4: Tfidf vectorisation
+
+Step 5: fit transform
+
+Step 6: Cosine Similarity calculation between user query tokoens and data tokens.
+
+Step 7: Response generation.If there is a data match(say above average match) return         the response , else return default message showing query not understood         (this problem can be solved by web-scraping i.e. adding more data to the         database).
+
+Step 8: Repeat step 2 to 7 until user queries get over.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
