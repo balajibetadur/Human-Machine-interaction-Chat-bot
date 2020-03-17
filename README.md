@@ -1,4 +1,4 @@
-#human Machine Interaction System
+# Human Machine Interaction System
 
 Building a Simple Chatbot from Scratch in Python (using NLTK)
 
