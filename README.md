@@ -11,7 +11,6 @@ Used selenium python library for generating autoclicks and downloading the data.
 chrome driver must be pre [installed](https://chromedriver.chromium.org/downloads) in the current  computer.Its executable path must be included as shown below.
 
 
-
 driver = webdriver.Chrome(executable_path='/Users/HP/Desktop/folders/others/chromedriver/chromedriver.exe')
 
 xpath helps us to direct to ther required part of the webpage.Now how to find xpath?Its simple .Go to the required webpage go to a particular section of webpage you need to generate action then right click on that part and select inspect option to view the code of the webpage.Then in the opened new tab go to the required section and then rightclick on the section and select copy.You will get few option from which you nedd to select copy full xpath.we can generate action with the help of clasess,xpaths,id's and few more.
